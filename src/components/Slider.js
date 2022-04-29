@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components'
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
-import SLIDES from './../SliderDate'
+import SLIDES from '../SliderData'
 
 const Slider = () => {
     //이미지 갯수 설정 : 실제 갯수보다 1개 작게 (index번호때문)
@@ -22,7 +22,7 @@ const Slider = () => {
     //이전버튼
     const prevSlide = () => {
         if(currenSlide ===0){
-            setCurrenSlide(0);
+            setCurrenSlide(TOTAL_SLIDES);
         }else{
             setCurrenSlide(currenSlide-1);
         }
